@@ -1,11 +1,9 @@
-<div class="app">
-	<Header />
+<script>
+  import "$lib/sleepapp/global.css";
+  import Header from "$lib/sleepapp/header.svelte";
+  import Footer from "$lib/sleepapp/footer.svelte";
+</script>
 
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
-</div>
+<Header></Header>
+<slot />
+<Footer></Footer>
