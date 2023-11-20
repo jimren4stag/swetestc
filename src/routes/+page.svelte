@@ -1,3 +1,7 @@
+<script>
+    import {browser} from "$app/environment";
+    import {goto} from "$app/navigation";
+</script>
 
 <svelte:head>
 	<title>Home</title>
