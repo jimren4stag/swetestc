@@ -7,7 +7,7 @@
     
     onMount(async() => {
         console.log("jimstats");
-        Test = (await import("../../../lib/sleepapp/tests/"+data.params.test_name + ".svelte")).default;
+        Test = (await import("../../../lib/sleepapp/tests/working_memory.svelte")).default;
         console.log("jimstats0");
         await fetch("/cookies?"+data.params.test_name, {method:"GET"})
         .then(response => response.json())
@@ -38,7 +38,7 @@
     }
 
 </script>
-{#if data.completed_tests.includes(data.params.test_name)}
+{#if !data.completed_tests.includes(data.params.test_name)}
 <svelte:component this={Test} on:complete={handleComplete}/>
 {:else}
 <div>
